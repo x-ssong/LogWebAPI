@@ -1,0 +1,14 @@
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\bin\Debug\netcoreapp2.2\LogWebApi.MongoDB.deps.json
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\bin\Debug\netcoreapp2.2\LogWebApi.MongoDB.runtimeconfig.json
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\bin\Debug\netcoreapp2.2\LogWebApi.MongoDB.runtimeconfig.dev.json
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\bin\Debug\netcoreapp2.2\LogWebApi.MongoDB.dll
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\bin\Debug\netcoreapp2.2\LogWebApi.MongoDB.pdb
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.csproj.CoreCompileInputs.cache
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.RazorAssemblyInfo.cache
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.RazorAssemblyInfo.cs
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.AssemblyInfoInputs.cache
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.AssemblyInfo.cs
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.RazorTargetAssemblyInfo.cache
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.dll
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.pdb
+D:\TestProject\LogWebApi\LogWebApi.MongoDB\obj\Debug\netcoreapp2.2\LogWebApi.MongoDB.csprojAssemblyReference.cache
