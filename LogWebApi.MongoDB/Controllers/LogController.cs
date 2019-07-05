@@ -22,5 +22,61 @@ namespace LogWebApi.MongoDB.Controllers
             _logRepository = (LogRepository)logRepository;
             _appsettings = appsettings;
         }
+
+        [Route("trace")]
+        [HttpPost]
+        public void Trace([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        [Route("debug")]
+        [HttpPost]
+        public void Debug([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        [Route("info")]
+        [HttpPost]
+        public void Info([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        [Route("warn")]
+        [HttpPost]
+        public void Warn([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        [Route("error")]
+        [HttpPost]
+        public void Error([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        [Route("fatal")]
+        [HttpPost]
+        public void Fatal([FromBody] LogData value)
+        {
+            Add(value);
+        }
+        private async void Add(LogData data)
+        {
+            if (data != null)
+            {
+                await _logRepository.Add(data);
+                if (!string.IsNullOrEmpty(data.Emails))
+                {
+                    //new EmailHelpers(_appsettings).SendMailAsync(data.Emails, "监测邮件", data.ToString());
+                }
+            }
+        }
+
+        [HttpGet("getlist")]
+        public async Task<ResponseModel<IEnumerable<LogData>>> GetList([FromQuery] QueryLogModel model)
+        {
+            ResponseModel<IEnumerable<LogData>> resp = new ResponseModel<IEnumerable<LogData>>();
+            resp.Data = await _logRepository.GetList(model);
+            return resp;
+        }
     }
 }

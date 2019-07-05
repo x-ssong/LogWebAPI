@@ -50,7 +50,6 @@ namespace LogWebApi.MongoDB.Repository
                 .Limit(model.PageSize).ToListAsync();
         }
 
-        #region 待实现的方法
         public async Task Add(LogData item)
         {
             await _context.LogDatas.InsertOneAsync(item);
@@ -64,7 +63,6 @@ namespace LogWebApi.MongoDB.Repository
             {
                 filter = builder.Eq("Id", id);
             }
-
             return await _context.LogDatas.Find(filter).SingleAsync();
         }
 
@@ -75,6 +73,7 @@ namespace LogWebApi.MongoDB.Repository
             return await _context.LogDatas.Find(filter).ToListAsync();
         }
 
+        #region 待实现的方法
         public async Task<bool> Remove(string id)
         {
             throw new NotImplementedException();

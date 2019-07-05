@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LogWebApi.MongoDB.Extensions;
+using LogWebApi.MongoDB.Model;
 using LogWebApi.MongoDB.Model.Settings;
+using LogWebApi.MongoDB.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +14,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
+using WebApiContrib.Core.Formatter.MessagePack;
 
 namespace LogWebApi.MongoDB
 {
@@ -29,10 +34,17 @@ namespace LogWebApi.MongoDB
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.Configure<DBSettings>(Configuration.GetSection(nameof(DBSettings)));
             services.Configure<AppSettings>(Configuration.GetSection(nameof(AppSettings)));
+            services.AddTransient<IRepository<LogData>, LogRepository>();
+            services.AddMvcCore().AddMessagePackFormatters();
+            services.AddMvc().AddMessagePackFormatters();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IOptions<DBSettings> settings)
         {
             if (env.IsDevelopment())
             {
@@ -43,9 +55,19 @@ namespace LogWebApi.MongoDB
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            //扩展
+            app.ConfigureExceptionHandler(settings);
+            app.UseMiddleware(typeof(RequestAuthorizeMiddleware));
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            //Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;//在应用的根 (http://localhost:<port>/) 处提供 Swagger UI
+            });
         }
     }
 }

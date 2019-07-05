@@ -1,0 +1,12 @@
+D:\TestProject\LogWebApi\LogApiHandler\bin\Debug\netstandard2.0\LogApiHandler.deps.json
+D:\TestProject\LogWebApi\LogApiHandler\bin\Debug\netstandard2.0\LogApiHandler.dll
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.csprojAssemblyReference.cache
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.csproj.CoreCompileInputs.cache
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.AssemblyInfoInputs.cache
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.AssemblyInfo.cs
+D:\TestProject\LogWebApi\LogApiHandler\bin\Debug\netstandard2.0\LogApiHandler.pdb
+D:\TestProject\LogWebApi\LogApiHandler\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\TestProject\LogWebApi\LogApiHandler\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.csproj.CopyComplete
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.dll
+D:\TestProject\LogWebApi\LogApiHandler\obj\Debug\netstandard2.0\LogApiHandler.pdb
